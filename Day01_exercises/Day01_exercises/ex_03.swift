@@ -31,27 +31,18 @@ func answer(result: Bool) -> String {
 }
 
 func isPositive(n: Int) -> Bool {
-    if n > 0 {
-        return true
-    } else {
-        return false
-    }
+    let result = n > 0 ? true: false
+    return result
 }
 
 func isEven(n: Int) -> Bool {
-    if n % 2 == 0 {
-        return true
-    } else {
-        return false
-    }
+    let result = n % 2 == 0 ? true : false
+    return result
 }
 
 func isDivisibleBy5(n: Int) -> Bool {
-    if n % 5 == 0 {
-        return true
-    } else {
-        return false
-    }
+    let result = n % 5 == 0 ? true : false
+    return result
 }
 
 func isPrime(n: Int) -> Bool {
