@@ -26,11 +26,8 @@ func guess(){
 }
 
 func answer(result: Bool) -> String {
-    if result {
-        return "Yes"
-    } else {
-        return "No"
-    }
+    let answer = result ? "Yes" : "No"
+    return answer
 }
 
 func isPositive(n: Int) -> Bool {
