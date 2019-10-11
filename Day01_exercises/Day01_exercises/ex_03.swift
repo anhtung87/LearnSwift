@@ -47,7 +47,7 @@ func isDivisibleBy5(n: Int) -> Bool {
 
 func isPrime(n: Int) -> Bool {
     if n >= 2 {
-        for number in 2..<n {
+        for number in 2...Int(sqrt(Double(n))) {
             if n % number == 0 {
                 return false
             }
