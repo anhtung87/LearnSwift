@@ -1,4 +1,7 @@
 # Learning Swift
+  This is the first part of my journey to become a mobile app developer. In this part, i will try to summarize what i had learned from class or myself one by one. Also, i'll push some solutions for my homeworks. Besides, because my English doesn't well. So i aslo try to develop my English skills. If you find mistakes, please tell me. You'll have my many thanks.
+  I write everything i learned to .md files. Ex: Day01.md, ...
+  With my solutions, you can read from subdirectories. Ex: Day01_exercises, ...
 ## Day 01
 ### Exercises
 1, Cho bán kính hình cầu, tính và in ra diện tích, thể tích của hình cầu đó.
