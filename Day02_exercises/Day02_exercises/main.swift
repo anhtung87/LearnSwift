@@ -27,4 +27,13 @@ import Foundation
 //findMinMaxNumber()
 
 // ex_02
-triangle()
+//triangle()
+
+// ex_03
+//leapYear()
+
+// ex_04
+convertDatetime()
+
+// ex_05
+//smallestFactorial()
