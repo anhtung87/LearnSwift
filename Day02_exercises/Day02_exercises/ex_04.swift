@@ -16,11 +16,15 @@ import Foundation
 func convertDatetime(){
     print("Nhap gio (gio : phut : giay):")
     let timeString = String(readLine()!)
+    let timeArray = timeString.components(separatedBy: " : ")
+    var hours = Int(timeArray[0])
+    var minutes = Int(timeArray[1])
+    var seconds = Int(timeArray[2])
     print("Nhap so nguyen:")
     let x = Int(readLine()!)!
-    let timeFormatter = DateFormatter()
-    timeFormatter.dateFormat = "HH : mm: ss"
-    timeFormatter.timeZone = TimeZone(abbreviation: "UTC")
-    let time = timeFormatter.date(from: timeString)
-    print(time)
+    hours! += Int(x / 3600)
+    minutes! += Int((x % 3600) / 60)
+    seconds! += Int((x % 3600) % 60)
+    print("New time: \(hours!) : \(minutes!) : \(seconds!)")
 }
+
