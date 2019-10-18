@@ -24,7 +24,19 @@ func convertDatetime(){
     let x = Int(readLine()!)!
     hours! += Int(x / 3600)
     minutes! += Int((x % 3600) / 60)
+    if minutes! >= 60 {
+        hours! += 1
+        minutes! = minutes! - 60
+    }
     seconds! += Int((x % 3600) % 60)
-    print("New time: \(hours!) : \(minutes!) : \(seconds!)")
+    if seconds! >= 60 {
+        minutes! += 1
+        seconds! = seconds! - 60
+    }
+    if hours! >= 24 {
+        print("New time: \(hours! - 24) : \(minutes!) : \(seconds!)")
+    } else {
+        print("New time: \(hours!) : \(minutes!) : \(seconds!)")
+    }
 }
 

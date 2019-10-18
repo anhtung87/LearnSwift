@@ -24,16 +24,16 @@ import Foundation
 
 
 // ex_01
-findMinMaxNumber()
+//findMinMaxNumber()
 
 // ex_02
-triangle()
+//triangle()
 
 // ex_03
-leapYear()
+//leapYear()
 
 // ex_04
-convertDatetime()
+//convertDatetime()
 
 // ex_05
 smallestFactorial()

@@ -32,7 +32,7 @@ import Foundation
 // *     *
 //*       *
 
-let array: [Int] = [0, 1, -1, 2, -3, 4, -6, 9]
+let array: [Int] = [5, 3, -1, 1, -3, 5, -3, 9]
 //// ex_01
 //replace(array: array)
 //
@@ -43,8 +43,7 @@ let array: [Int] = [0, 1, -1, 2, -3, 4, -6, 9]
 //second(array: array)
 
 // ex_04
-//findFirstOddAndLastEven(array: array)
-
+findFirstOddAndLastEven(array: array)
 // ex_05
 //reversed(str: "This is Swift")
 

@@ -15,7 +15,7 @@ import Foundation
 func leapYear(){
     print("Nhap nam:")
     let year = Int(readLine()!)!
-    if year > 0 && year % 4 == 0 && year % 100 == 0 && year % 400 == 0 {
+    if (year > 0 && year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) {
         print("\(year) is leap year")
     } else {
         print("\(year) is not leap year")
