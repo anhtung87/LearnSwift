@@ -23,10 +23,11 @@ import Foundation
 //6, Viết chương trình nhập vào số nguyên dương N (N<=32767), in ra màn hình những số hoàn hảo nhỏ hơn N (số hoàn hảo là số bằng tổng các ước số của nó mà không kể chính nó)
 
 // ex_01
-let array = [1, 0, 4, 3, -1, -3]
+let array = [1, 0, 4, 3, -1, -3, 900 , -899, 123, 122]
 //print(minSort(array: array))
 //print(maxSort(array: array))
-print(mergeSort(arr: array))
+//print(mergeSort(arr: array))
+print(timSort(arr: array))
 
 // ex_02
 //secondMax()

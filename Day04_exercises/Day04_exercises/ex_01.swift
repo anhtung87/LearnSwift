@@ -110,3 +110,27 @@ func mergeSort(arr: [Int]) -> [Int] {
     }
     return array
 }
+
+func timSort(arr: [Int]) -> [Int] {
+    
+    func insertSort(arr: [Int], number: Int) -> [Int] {
+        var array = arr + [number]
+        var i = arr.count - 1
+        while i >= 0 {
+            if array[i] > number {
+                array[i + 1] = array[i]
+                array[i] = number
+            } else {
+                break
+            }
+            i -= 1
+        }
+        return array
+    }
+    
+    var array = [arr[0]]
+    for i in arr[1...] {
+        array = insertSort(arr: array, number: i)
+    }
+    return array
+}
