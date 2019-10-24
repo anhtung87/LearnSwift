@@ -44,10 +44,10 @@ import Foundation
 //drawRectangle2()
 
 // ex_03
-//drawTriangle()
+drawTriangle()
 
 // ex_04
 //drawIsoscelesTriangle()
 
 // ex_05
-collatz()
+//collatz()

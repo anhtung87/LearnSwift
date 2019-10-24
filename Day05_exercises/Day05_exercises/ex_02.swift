@@ -24,26 +24,22 @@ func drawRectangle2() {
     }
     print("Nhap chieu dai (so le):")
     let width = Int(readLine()!)!
-    if width < 2 || width % 2 == 0 {
+    if width < 2 {
         drawRectangle2()
         return
     }
     for line in 1...height {
         if line == 1 || line == height {
-            for space in 1...(2 * width - 1) {
-                if space % 2 == 0 {
-                    print(" ", terminator:"")
-                } else {
-                    print("*", terminator:"")
-                }
+            for _ in 1...width {
+                print("*", terminator: " ")
             }
             print()
         } else {
-            for space in 1...(2 * width - 1) {
-                if space == 1 || space == 2 * width - 1 {
-                    print("*", terminator:"")
+            for space in 1...width {
+                if space == 1 || space == width {
+                    print("*", terminator:" ")
                 } else {
-                    print(" ", terminator:"")
+                    print(" ", terminator:" ")
                 }
             }
             print()

@@ -25,7 +25,7 @@ func drawTriangle(){
     }
     for line in 1...height {
         for _ in 1...line {
-            print("*", terminator:"")
+            print("*", terminator:" ")
         }
         print()
     }
