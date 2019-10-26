@@ -22,10 +22,10 @@ import Foundation
 //sum()
 
 // ex_02
-//tinhDoiXung()
+tinhDoiXung2()
 
 // ex_03
 //phuongTrinhBac2()
 
 //ex_04
-tinhTienTaxi()
+//tinhTienTaxi()

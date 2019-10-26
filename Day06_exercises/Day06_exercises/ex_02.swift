@@ -16,7 +16,7 @@ func tinhDoiXung() {
     // Trả ra thông báo nếu người dùng không nhập số
     if Int(input) == nil {
         print("\(input) không phải là số")
-        return sum()
+        return tinhDoiXung()
     }
     // Để kiểm tra tính đối xứng, cần chuyển input từ type String sang type Array với element là các chữ số trong input
     let numbers = input.map {Int(String($0))}
@@ -31,6 +31,21 @@ func tinhDoiXung() {
     }
     
     if doiXung {
+        print("\(input) có tính đối xứng")
+    } else {
+        
+    }
+}
+
+func tinhDoiXung2() {
+    print("Nhập số bất kỳ:")
+    let input = readLine()!
+    // Trả ra thông báo nếu người dùng không nhập số
+    guard let number = Int(input) else {
+        print("\(input) không phải là số")
+        return tinhDoiXung()
+    }
+    if number == Int(String(input.reversed())) {
         print("\(input) có tính đối xứng")
     } else {
         print("\(input) không có tính đối xứng")
