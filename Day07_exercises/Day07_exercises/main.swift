@@ -20,7 +20,7 @@ import Foundation
 //soNgayTrongThang()
 
 // ex_03
-//insertElement([1.0, 3.2, 2.4, 5.7, 1.9, 5.7, 5.7])
+insertElement([1.0, 3.2, 2.4, 5.7, 1.9, 5.7, 5.7])
 
 // ex_04
-insertElement2([1.0, 3.2, 2.4, 5.7, 1.9, 5.7, 5.7])
+//insertElement2([1.0, 3.2, 2.4, 5.7, 1.9, 5.7, 5.7])

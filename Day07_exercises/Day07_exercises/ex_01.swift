@@ -32,7 +32,7 @@ func timCacSoNguyenTo(_ b: Int) -> [Int] {
     for number in 2...b {
         var laSoNguyenTo = true
         for soNguyenTo in cacSoNguyenTo {
-            if number % soNguyenTo == 0 {
+            if soNguyenTo < Int(sqrtf(Float(number))) && number % soNguyenTo == 0 {
                 laSoNguyenTo = false
             }
         }
