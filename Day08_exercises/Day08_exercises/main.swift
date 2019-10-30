@@ -38,12 +38,15 @@ import Foundation
 //print(sortReversed(array: [1.1, 2.2, 1.4, 3.5, 0.9]))
 
 // ex_02
-var rhombus = Rhombus()
-rhombus.drawHalf()
-rhombus.drawFull()
+//var rhombus = Rhombus()
+//rhombus.drawHalf()
+//rhombus.drawFull()
 
 // ex_03
-//printDate()
+var day = DeterminedDay()
+day.printNumberOfDays()
+day.printNextDay()
+day.printPerviousDay()
 
 // ex_04
 //findArmstrong()
