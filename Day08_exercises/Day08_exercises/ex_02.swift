@@ -30,29 +30,50 @@ import Foundation
 //   ***
 //    *
 
-func drawFullRhombus() {
-    print("Nhập chiều cao hình thoi:")
-    let lines = Int(readLine()!)!
+class Rhombus {
+    var lines: Int
     
-    if lines < 0 || lines % 2 == 0 {
-        print("số dòng phải là số lẻ")
-        return drawFullRhombus()
+    init() {
+        print("Nhập chiều cao hình thoi:")
+        self.lines = Int(readLine()!)!
     }
     
-    let spaces = lines
-    for line in 1...lines {
-        if line <= (lines + 1) / 2 {
-            for index in 1...spaces {
-                if index > (spaces - (2 * line - 1)) / 2 && index < (spaces + (2 * line - 1) + 2) / 2 {
-                    print("*", terminator: "")
-                } else {
-                    print(" ", terminator: "")
+    func drawFull() {
+        if self.lines < 0 || self.lines % 2 == 0 {
+            print("số dòng của hình thoi phải là số lẻ")
+            return
+        }
+        
+        let spaces = self.lines
+        for line in 1...self.lines {
+            if line <= (self.lines + 1) / 2 {
+                for index in 1...spaces {
+                    if index > (spaces - (2 * line - 1)) / 2 && index < (spaces + (2 * line - 1) + 2) / 2 {
+                        print("*", terminator: "")
+                    } else {
+                        print(" ", terminator: "")
+                    }
                 }
+                print()
+            } else {
+                for index in 1...spaces {
+                    if index > (2 * line - 1 - self.lines) / 2 && index < (3 * self.lines - 2 * line + 3) / 2 {
+                        print("*", terminator: "")
+                    } else {
+                        print(" ", terminator: "")
+                    }
+                }
+                print()
             }
-            print()
-        } else {
-            for index in 1...spaces {
-                if index > (2 * line - 1 - lines) / 2 && index < (3 * lines - 2 * line + 3) / 2 {
+        }
+    }
+    
+    func drawHalf() {
+        let width = self.lines % 2 == 0 ? self.lines / 2 : (self.lines + 1) / 2
+        
+        for line in 1...self.lines {
+            for index in 1...width {
+                if (line <= width && index <= line) || (line > width && index <= self.lines + 1 - line) {
                     print("*", terminator: "")
                 } else {
                     print(" ", terminator: "")
@@ -63,30 +84,3 @@ func drawFullRhombus() {
     }
 }
 
-func drawHalfRhombus() {
-    print("Nhập chiều cao hình thoi:")
-    let lines = Int(readLine()!)!
-    let width = lines % 2 == 0 ? lines / 2 : (lines + 1) / 2
-    
-    for line in 1...lines {
-        if line <= width {
-            for index in 1...width {
-                if index <= line {
-                    print("*", terminator: "")
-                } else {
-                    print(" ", terminator: "")
-                }
-            }
-            print()
-        } else {
-            for index in 1...width {
-                if index <= lines + 1 - line {
-                    print("*", terminator: "")
-                } else {
-                    print(" ", terminator: "")
-                }
-            }
-            print()
-        }
-    }
-}

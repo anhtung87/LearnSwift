@@ -38,11 +38,12 @@ import Foundation
 //print(sortReversed(array: [1.1, 2.2, 1.4, 3.5, 0.9]))
 
 // ex_02
-//drawHalfRhombus()
-//drawFullRhombus()
+var rhombus = Rhombus()
+rhombus.drawHalf()
+rhombus.drawFull()
 
 // ex_03
 //printDate()
 
 // ex_04
-findArmstrong()
+//findArmstrong()

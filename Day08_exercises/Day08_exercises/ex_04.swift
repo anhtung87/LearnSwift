@@ -10,13 +10,13 @@ import Foundation
 
 //Tìm số Amstrong là một số có đặc điểm sau: số đó gồm n chữ số, tổng các lũy thừa bậc n của các chữ số đó và số đó. Ví dụ: 153 = 1^3 + 5^3 + 3^3. Hãy tìm các số Amstrong nhỏ hơn 1000.
 func findArmstrong() {
-    let armstrongNumberArray: [Int] = Array(1..<1000).filter {isArmstrong($0)}
+    let armstrongNumberArray: [Int] = Array(1..<1000).filter { isArmstrong($0) }
     print(armstrongNumberArray)
 }
 
 func isArmstrong(_ n: Int) -> Bool {
     let numberArray: [Int] = convertIntToArray(n)
-    let powerArray: [Int] = numberArray.map({Int(powf(Float($0), Float(numberArray.count)))})
+    let powerArray: [Int] = numberArray.map { Int(powf(Float($0), Float(numberArray.count))) }
     let totalPower = powerArray.reduce(0, {$0 + $1})
     return totalPower == n
 }
