@@ -16,26 +16,26 @@ class DeterminedDay {
     
     init() {
         print("Nhập ngày tháng năm theo định dạng dd-MM-yyyy:")
-        self.dateString = readLine()!
-        self.dateFormatter.dateFormat = "dd-MM-yyyy"
-        self.dateFormatter.timeZone = TimeZone(identifier: "GMT")
-        self.date = self.dateFormatter.date(from: self.dateString)!
+        dateString = readLine()!
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.timeZone = TimeZone(identifier: "GMT")
+        date = dateFormatter.date(from: dateString)!
     }
     
     func printNumberOfDays() {
-        let interval = self.calendar.dateInterval(of: Calendar.Component.month, for: self.date)
-        let days = self.calendar.dateComponents([Calendar.Component.day], from: interval!.start, to: interval!.end).day!
+        let interval = calendar.dateInterval(of: Calendar.Component.month, for: date)
+        let days: Int = calendar.dateComponents([Calendar.Component.day], from: interval!.start, to: interval!.end).day!
         print("Số ngày trong tháng là: \(days)")
     }
     
     func printNextDay() {
-        let nextDay = self.calendar.date(byAdding: Calendar.Component.day, value: 1, to: self.date)
-        let nextDayString = self.dateFormatter.string(from: nextDay!)
+        let nextDay = calendar.date(byAdding: Calendar.Component.day, value: 1, to: date)
+        let nextDayString = dateFormatter.string(from: nextDay!)
         print("Ngày tiếp theo là: \(nextDayString)")
     }
     
     func printPerviousDay() {
-        let perviousDay = self.calendar.date(byAdding: .day, value: -1, to: self.date)
+        let perviousDay = self.calendar.date(byAdding: .day, value: -1, to: date)
         let perviousDayString = dateFormatter.string(from: perviousDay!)
         print("Ngày trước đó là: \(perviousDayString)")
     }
