@@ -10,5 +10,5 @@ import Foundation
 //Sắp xếp mảng giảm dần sử dụng hàm sort()
 
 func sortReversed(array: [Float]) -> [Float] {
-    return array.sorted().reversed()
+    return array.sorted(by: {$0 >= $1})
 }

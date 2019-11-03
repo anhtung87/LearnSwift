@@ -43,10 +43,10 @@ import Foundation
 //rhombus.drawFull()
 
 // ex_03
-var day = DeterminedDay()
-day.printNumberOfDays()
-day.printNextDay()
-day.printPerviousDay()
+//var day = DeterminedDay()
+//day.printNumberOfDays()
+//day.printNextDay()
+//day.printPerviousDay()
 
 // ex_04
-//findArmstrong()
+findArmstrong()
